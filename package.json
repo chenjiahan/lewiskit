@@ -1,0 +1,19 @@
+{
+  "name": "lewiskit",
+  "version": "1.0.0",
+  "description": "lewiskit's Home Page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenjiahan/lewiskit.git"
+  },
+  "author": "lewiskit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenjiahan/lewiskit/issues"
+  },
+  "homepage": "https://github.com/chenjiahan/lewiskit#readme"
+}
