@@ -5,14 +5,24 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
+    @media (max-width: 360px) {
+        font-size: 10px;
+    }
+    @media (min-width:361px) and (max-width: 480px) {
+        font-size: 12px;
+    }
+    @media (min-width:481px) and (max-width: 720px) {
+        font-size: 14px;
+    }
 }
 body {
     margin: 0;
-    color: #fff;
+    padding: 0;
+    color: #373a3c;
     font-size: 1rem;
     line-height: 1.5;
-    background: #32425C;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: #fff;
+    font-family: 'Raleway', sans-serif;
 }
 menu,
 nav,
@@ -23,6 +33,7 @@ section {
     display: block;
 }
 a {
+    color: inherit;
     background-color: transparent;
 }
 a:active,
@@ -70,5 +81,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-weight: 400;
+}
+section {
+    padding: 2rem 0;
 }

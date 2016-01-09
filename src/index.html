@@ -12,16 +12,26 @@
 </head>
 <body>
     <header>
-        <h1>Hello world!</h1>
-        <h2>Welcome to Lewis Feng's Website</h2>
-    </header>
-    <section id="about">
-        <img src="">
-        <div>
-            Yihao(Lewis) Feng is a senior undergraduate student at College of Software, Beihang University(链接：http://ev.buaa.edu.cn), China
-            My research interests includes Machine Learning and Data mining, especially the fields of Probabilistic Graphical Models and its applications.
-            This website is designed to show me as a researcher, programmer and passionate Learner.
+        <div class="title">
+            <h1>Hello world!</h1>
+            <div class="line"></div>
+            <h2>Welcome to Lewis Feng's Website</h2>
         </div>
-    </section>
+    </header>
+    <div id="content">
+        <section id="about">
+            <img src="cover.png">
+            <div class="intro">
+                Yihao(Lewis) Feng is a senior undergraduate student at College of Software, <a href="http://ev.buaa.edu.cn" target="_blank">Beihang University</a>, China.<br>
+                My research interests includes Machine Learning and Data mining, especially the fields of Probabilistic Graphical Models and its applications.<br>
+                This website is designed to show me as a researcher, programmer and passionate Learner.
+            </div>
+        </section>
+    </div>
 </body>
+<script>
+    var windowHeight = window.innerHeight + 'px';
+    document.querySelector('header').style.height = windowHeight;
+    document.getElementById('content').style.marginTop = windowHeight;
+</script>
 </html>
