@@ -9,21 +9,25 @@ var changed = require('gulp-changed');
 var autoprefixer = require('gulp-autoprefixer');
 
 var autoprefixerConfig = {
-    browsers: ['Android >= 2.3', 'iOS >= 6', 'last 2 Chrome versions', 'last 2 Safari versions']
+    browsers: [
+        'Android >= 2.3',
+        'iOS >= 6',
+        '> 1% in US'
+    ]
 };
 
 var path = {
     js  : 'src/js/index.js',
-    less: 'src/style/index.less',
+    less: ['src/style/index.less', 'src/style/*.less'],
     html: 'src/index.html'
 };
 
 gulp.task('less', function() {
-    gulp.src(path.less)
+    gulp.src(path.less[0])
         .pipe(changed('dist'))
         .pipe(less())
         .pipe(autoprefixer(autoprefixerConfig))
-        .pipe(csso())
+        //.pipe(csso())
         .pipe(gulp.dest('dist'));
 });
 
@@ -47,7 +51,7 @@ gulp.task('js', function() {
 })
 
 gulp.task('watch', function() {
-    gulp.watch(path.less, ['js']);
+    gulp.watch(path.js, ['js']);
     gulp.watch(path.less, ['less']);
     gulp.watch(path.html, ['html']);
 });
