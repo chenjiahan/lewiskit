@@ -19,19 +19,23 @@
         </div>
     </header>
     <div id="content">
-        <section id="about">
-            <img src="cover.png">
-            <div class="intro">
-                Yihao(Lewis) Feng is a senior undergraduate student at College of Software, <a href="http://ev.buaa.edu.cn" target="_blank">Beihang University</a>, China.<br>
-                My research interests includes Machine Learning and Data mining, especially the fields of Probabilistic Graphical Models and its applications.<br>
+        <section id="about" class="row">
+            <img class="grid-3" src="cover.png">
+            <div class="grid-9" class="intro">
+                Yihao(Lewis) Feng is a senior undergraduate student at College of Software, <a href="http://ev.buaa.edu.cn" target="_blank">Beihang University</a>, China.<br><br>
+                My research interests includes Machine Learning and Data mining, especially the fields of Probabilistic Graphical Models and its applications.<br><br>
                 This website is designed to show me as a researcher, programmer and passionate Learner.
             </div>
         </section>
     </div>
 </body>
 <script>
-    var windowHeight = window.innerHeight + 'px';
-    document.querySelector('header').style.height = windowHeight;
-    document.getElementById('content').style.marginTop = windowHeight;
+    function headerResize() {
+        var windowHeight = window.innerHeight + 'px';
+        document.querySelector('header').style.height = windowHeight;
+        document.getElementById('content').style.marginTop = windowHeight;
+    }
+    headerResize();
+    window.addEventListener('resize', headerResize);
 </script>
 </html>

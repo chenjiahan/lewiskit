@@ -1,0 +1,27 @@
+section {
+    padding: 10rem 0;
+}
+.row {
+    margin: 0 auto;
+    max-width: 1000px;
+    &:before,
+    &:after {
+        display: table;
+        content: ' ';
+        clear: both;
+    }
+}
+.grid-3,
+.grid-9 {
+    float: left;
+    display: block;
+    min-height: 1px;
+    padding: 0 1rem;
+    position: relative;
+}
+.grid-3 {
+    width: 25%;
+}
+.grid-9 {
+    width: 75%;
+}
