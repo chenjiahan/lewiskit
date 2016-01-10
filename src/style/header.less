@@ -1,6 +1,8 @@
 header {
+    height: 700px;
+}
+.wallpaper {
     position: fixed;
-    display: table;
     z-index: 1;
     top: 0;
     left: 0;
@@ -9,27 +11,30 @@ header {
     background: #4bb8d2;
     background: url("header.jpg") no-repeat center;
 }
-.title {
+.hello {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
     color: #fff;
+    width: 100%;
+    padding: 0 1rem;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+    transform: translate3d(0 ,-50%, 0);
     h1,
     h2 {
-        margin: 0 1rem;
         line-height: 1;
         animation: fadeInUp .6s .3s ease both;
     }
     h1 {
-        font-size: 4.75rem;
+        font-size: 4rem;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     .line {
-        width: 33rem;
         height: 2px;
         background: #fff;
+        max-width: 33rem;
         margin: 2rem auto;
         animation: scaleX .6s .3s ease both;
     }

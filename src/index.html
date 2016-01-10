@@ -12,7 +12,8 @@
 </head>
 <body>
     <header>
-        <div class="title">
+        <div class="wallpaper"></div>
+        <div class="hello">
             <h1>Hello world!</h1>
             <div class="line"></div>
             <h2>Welcome to Lewis Feng's Website</h2>
@@ -20,6 +21,7 @@
     </header>
     <div id="content">
         <section id="about" class="row">
+            <div class="grid-12 title">ABOUT</div>
             <img class="grid-3" src="cover.png">
             <div class="grid-9" class="intro">
                 Yihao(Lewis) Feng is a senior undergraduate student at College of Software, <a href="http://ev.buaa.edu.cn" target="_blank">Beihang University</a>, China.<br><br>
@@ -32,8 +34,8 @@
 <script>
     function headerResize() {
         var windowHeight = window.innerHeight + 'px';
+        document.querySelector('.wallpaper').style.height = windowHeight;
         document.querySelector('header').style.height = windowHeight;
-        document.getElementById('content').style.marginTop = windowHeight;
     }
     headerResize();
     window.addEventListener('resize', headerResize);

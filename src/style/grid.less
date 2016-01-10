@@ -1,5 +1,5 @@
 section {
-    padding: 10rem 0;
+    padding: 6rem 0;
 }
 .row {
     margin: 0 auto;
@@ -11,17 +11,32 @@ section {
         clear: both;
     }
 }
+.generate-grid(12);
+.generate-grid(@n, @i: 1) when (@i =< @n) {
+    .grid-@{i} {
+        width: 100% / 12 * @i;
+    }
+    .generate-grid(@n, (@i + 1));
+}
+.grid-1,
+.grid-2,
 .grid-3,
-.grid-9 {
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12 {
     float: left;
     display: block;
     min-height: 1px;
     padding: 0 1rem;
     position: relative;
-}
-.grid-3 {
-    width: 25%;
-}
-.grid-9 {
-    width: 75%;
+    @media (max-width: 480px) {
+        width: 100%;
+        padding: 1rem;
+    }
 }
