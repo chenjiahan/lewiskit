@@ -31,7 +31,7 @@ html {
 }
 @media (min-width: 481px) and (max-width: 960px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 961px) {
@@ -113,22 +113,22 @@ h6 {
   margin: 0;
 }
 section {
-  padding: 6rem 0;
+  padding: 6rem 1rem;
 }
 @media (max-width: 480px) {
   section {
     padding: 3rem 0;
   }
 }
-.row {
-  margin: 0 auto;
-  max-width: 1000px;
-}
-.row:before,
-.row:after {
+section:before,
+section:after {
   display: table;
   content: ' ';
   clear: both;
+}
+.row {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 .grid-1 {
   width: 8.33333333%;
@@ -293,28 +293,37 @@ header {
   -webkit-animation: scaleX .6s .3s ease both;
           animation: scaleX .6s .3s ease both;
 }
+/* -- content --*/
 #content {
   position: relative;
   z-index: 3;
-  padding: 0 1rem;
   background: #fff;
   -webkit-box-shadow: rgba(35, 35, 50, 0.8) 0 0 11px -2px;
           box-shadow: rgba(35, 35, 50, 0.8) 0 0 11px -2px;
 }
+/* -- title --*/
 .title {
   font-size: 1.75rem;
   font-weight: bold;
   text-align: center;
   margin: -1rem 0 2rem;
 }
-#about img {
+/* -- logo --*/
+.logo {
   display: block;
   width: 100%;
   margin: 0 auto;
   max-width: 16rem;
 }
-#about .intro {
-  font-size: 1.25rem;
-  margin: 0 auto;
-  max-width: 32rem;
+/* -- education --*/
+#education {
+  color: #555;
+  background: #F7F7F7;
+}
+#education .grid-9 {
+  line-height: 2;
+}
+#education .school {
+  color: #777;
+  font-size: 120%;
 }

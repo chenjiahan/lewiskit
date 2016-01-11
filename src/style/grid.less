@@ -1,18 +1,18 @@
 section {
-    padding: 6rem 0;
+    padding: 6rem 1rem;
     @media (max-width: 480px) {
         padding: 3rem 0;
     }
-}
-.row {
-    margin: 0 auto;
-    max-width: 1000px;
     &:before,
     &:after {
         display: table;
         content: ' ';
         clear: both;
     }
+}
+.row {
+    margin: 0 auto;
+    max-width: 1000px;
 }
 .generate-grid(12);
 .generate-grid(@n, @i: 1) when (@i =< @n) {
