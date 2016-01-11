@@ -26,17 +26,12 @@ html {
 }
 @media (max-width: 480px) {
   html {
-    font-size: 14px;
-  }
-}
-@media (min-width: 481px) and (max-width: 720px) {
-  html {
     font-size: 16px;
   }
 }
-@media (min-width: 721px) and (max-width: 960px) {
+@media (min-width: 481px) and (max-width: 960px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media (min-width: 961px) {
@@ -119,6 +114,11 @@ h6 {
 }
 section {
   padding: 6rem 0;
+}
+@media (max-width: 480px) {
+  section {
+    padding: 3rem 0;
+  }
 }
 .row {
   margin: 0 auto;
@@ -306,6 +306,12 @@ header {
   font-weight: bold;
   text-align: center;
   margin: -1rem 0 2rem;
+}
+#about img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 16rem;
 }
 #about .intro {
   font-size: 1.25rem;
