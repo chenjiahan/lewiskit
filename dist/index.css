@@ -308,22 +308,33 @@ header {
   text-align: center;
   margin: -1rem 0 2rem;
 }
+@media (max-width: 480px) {
+  .title {
+    margin-bottom: 0;
+  }
+}
 /* -- logo --*/
 .logo {
   display: block;
   width: 100%;
   margin: 0 auto;
-  max-width: 16rem;
+  max-width: 12rem;
 }
 /* -- education --*/
 #education {
   color: #555;
   background: #F7F7F7;
 }
-#education .grid-9 {
+/* -- subtitle --*/
+.subtitle {
+  color: #777;
+  font-size: 115%;
+}
+.line-height-2 {
   line-height: 2;
 }
-#education .school {
-  color: #777;
-  font-size: 120%;
+/* -- research --*/
+#research {
+  color: #555;
+  background: #F7F7F7;
 }

@@ -12,6 +12,9 @@
     font-weight: bold;
     text-align: center;
     margin: -1rem 0 2rem;
+    @media (max-width: 480px) {
+        margin-bottom: 0;
+    }
 }
 
 /* -- logo --*/
@@ -19,18 +22,26 @@
     display: block;
     width: 100%;
     margin: 0 auto;
-    max-width: 16rem;
+    max-width: 12rem;
 }
 
 /* -- education --*/
 #education {
     color: #555;
     background: #F7F7F7;
-    .grid-9 {
-        line-height: 2;
-    }
-    .school {
-        color: #777;
-        font-size: 120%;
-    }
+}
+
+/* -- subtitle --*/
+.subtitle {
+    color: #777;
+    font-size: 115%;
+}
+.line-height-2 {
+    line-height: 2;
+}
+
+/* -- research --*/
+#research {
+    color: #555;
+    background: #F7F7F7;
 }
