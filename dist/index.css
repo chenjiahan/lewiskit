@@ -120,15 +120,17 @@ section {
     padding: 3rem 0;
   }
 }
-section:before,
-section:after {
-  display: table;
-  content: ' ';
-  clear: both;
-}
 .row {
   margin: 0 auto;
   max-width: 1000px;
+}
+section:before,
+.row:before,
+section:after,
+.row:after {
+  display: table;
+  content: ' ';
+  clear: both;
 }
 .grid-1 {
   width: 8.33333333%;
