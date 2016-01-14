@@ -27,7 +27,7 @@ gulp.task('less', function() {
         .pipe(changed('dist'))
         .pipe(less())
         .pipe(autoprefixer(autoprefixerConfig))
-        //.pipe(csso())
+        .pipe(csso())
         .pipe(gulp.dest('dist'));
 });
 
