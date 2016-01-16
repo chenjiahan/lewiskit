@@ -24,6 +24,7 @@
                     <li data-target="research">Research</li>
                     <li data-target="education">Education</li>
                     <li data-target="work">Work</li>
+                    <li><a href="yihaofeng-CV.pdf" target="_blank">CV</a></li>
                 </ul>
             </div>
         </nav>
@@ -122,7 +123,10 @@
 
     document.querySelector('.nav-right').addEventListener('click', function(e) {
         if (e.target.tagName === 'LI') {
-            scroll(document.querySelector('#' + e.target.dataset.target));
+            var target = e.target.dataset.target;
+            if (target) {
+                scroll(document.querySelector('#' + target));
+            }
         }
     });
 
@@ -155,7 +159,6 @@
     
     // scroll To
     function scroll(target) {
-        var time = 300;
 
         //若target为元素,则获取其与顶部距离
         if (typeof target.offsetTop === 'number') {
@@ -163,7 +166,7 @@
         }
 
         var offset = document.documentElement.scrollTop || document.body.scrollTop;  //滚动条位置
-        var step = Math.abs(offset - target) * 16 / time; //滚动步长
+        var step = 80; //滚动步长
 
         //滚动位置不超过底部
         offset = preventOutOfPage(offset);
