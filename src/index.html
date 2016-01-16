@@ -158,11 +158,11 @@
         var time = 300;
 
         //若target为元素,则获取其与顶部距离
-        if(typeof target.offsetTop === 'number') {
+        if (typeof target.offsetTop === 'number') {
             target = target.offsetTop;
         }
 
-        var offset = document.body.scrollTop;             //滚动条位置
+        var offset = document.documentElement.scrollTop || document.body.scrollTop;  //滚动条位置
         var step = Math.abs(offset - target) * 16 / time; //滚动步长
 
         //滚动位置不超过底部
