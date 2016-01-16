@@ -12,18 +12,18 @@
     <link href="img/favicon.ico" rel="shortcut icon">
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav class="flexible-nav">
             <div class="row">
                 <div class="nav-left">
 
                 </div>
                 <ul class="nav-right">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Education</li>
-                    <li>Work</li>
-                    <li>Research</li>
+                    <li data-target="home">Home</li>
+                    <li data-target="about">About</li>
+                    <li data-target="research">Research</li>
+                    <li data-target="education">Education</li>
+                    <li data-target="work">Work</li>
                 </ul>
             </div>
         </nav>
@@ -34,72 +34,70 @@
             <h2>Welcome to Lewis Feng's Website</h2>
         </div>
     </header>
-    <div id="content">
-        <section id="about">
-            <div class="grid-12 title">ABOUT</div>
-            <div class="row">
-                <div class="grid-3">
-                    <img class="logo" src="img/photo-myself.jpg" alt="my photo">
-                </div>
-                <div class="grid-9">
-                    Yihao(Lewis) Feng is a senior undergraduate student at College of Software, <a href="http://ev.buaa.edu.cn" target="_blank">Beihang University</a>, China.<br><br>
-                    My research interests includes Machine Learning and Data mining, especially the fields of Probabilistic Graphical Models and its applications.<br><br>
-                    This website is designed to show me as a researcher, programmer and passionate Learner.
-                </div>
+    <section id="about">
+        <div class="grid-12 title">ABOUT</div>
+        <div class="row">
+            <div class="grid-3">
+                <img class="logo" src="img/photo-myself.jpg" alt="my photo">
             </div>
-        </section>
-        <section id="research">
-            <div class="grid-12 title">RESEARCH</div>
-            <div class="row">
-                <div class="grid-12">
-                    <h3 class="subtitle">Carnegie Mellon University, USA</h3>
-                    Research Assistant, July. 2015- Sept. 2015<br>
-                    <a href="http://articulab.hcii.cs.cmu.edu" target="_blank">ArticuLab</a>, Human-Computer Interaction Institute<br>
-                    Under supervision by <a href="http://www.justinecassell.com" target="_blank">Prof. Justine Cassell</a>
-                </div>
+            <div class="grid-9">
+                Yihao(Lewis) Feng is a senior undergraduate student at College of Software, <a href="http://ev.buaa.edu.cn" target="_blank">Beihang University</a>, China.<br><br>
+                My research interests includes Machine Learning and Data mining, especially the fields of Probabilistic Graphical Models and its applications.<br><br>
+                This website is designed to show me as a researcher, programmer and passionate Learner.
             </div>
-            <div class="row">
-                <div class="grid-12">
-                    <h3 class="subtitle">Peking University, China</h3>
-                    Research Assistant, Oct.2014- present<br>
-                    State Key Laboratory of Machine Perception,<br>
-                    Under Supervision by <a href="http://www.klmp.pku.edu.cn/Faculty/FacultyDetail.aspx?FacultyID=44" target="_blank">Prof. Guojie Song</a>
-                </div>
+        </div>
+    </section>
+    <section id="research">
+        <div class="grid-12 title">RESEARCH</div>
+        <div class="row">
+            <div class="grid-12">
+                <h3 class="subtitle">Carnegie Mellon University, USA</h3>
+                Research Assistant, July. 2015- Sept. 2015<br>
+                <a href="http://articulab.hcii.cs.cmu.edu" target="_blank">ArticuLab</a>, Human-Computer Interaction Institute<br>
+                Under supervision by <a href="http://www.justinecassell.com" target="_blank">Prof. Justine Cassell</a>
             </div>
-            <div class="row">
-                <div class="grid-12">
-                    <h3 class="subtitle">University of Tsukuba, Japan</h3>
-                    Academic Visiting Student, July.2014<br>
-                    <a href="http://www.mma.cs.tsukuba.ac.jp" target="_blank">Mathematical Modeling & Algorithms Laboratory</a><br>
-                    Under Supervision By Dr. Yasuyuki Maeda
-                </div>
+        </div>
+        <div class="row">
+            <div class="grid-12">
+                <h3 class="subtitle">Peking University, China</h3>
+                Research Assistant, Oct.2014- present<br>
+                State Key Laboratory of Machine Perception<br>
+                Under Supervision by <a href="http://www.klmp.pku.edu.cn/Faculty/FacultyDetail.aspx?FacultyID=44" target="_blank">Prof. Guojie Song</a>
             </div>
-        </section>
-        <section id="education">
-            <div class="grid-12 title">EDUCATION</div>
-            <div class="row">
-                <div class="grid-3">
-                    <img class="logo" src="img/buaa-logo.jpg" alt="scholl badge of buaa">
-                </div>
-                <div class="grid-9">
-                    <h3 class="subtitle">Beihang University</h3>
-                    B.E, Software Engineering, 2012-2016<br>
-                    Major GPA 3.85/4, Overall GPA 3.74 /4 <br>
-                    Ranking No.4 among 136 students in College of Software.
-                </div>
+        </div>
+        <div class="row">
+            <div class="grid-12">
+                <h3 class="subtitle">University of Tsukuba, Japan</h3>
+                Academic Visiting Student, July.2014<br>
+                <a href="http://www.mma.cs.tsukuba.ac.jp" target="_blank">Mathematical Modeling & Algorithms Laboratory</a><br>
+                Under Supervision By Dr. Yasuyuki Maeda
             </div>
-        </section>
-        <section id="work">
-            <div class="grid-12 title">WORK</div>
-            <div class="row">
-                <div class="grid-12">
-                    <h3 class="subtitle">Software Engineer, Mobile & Big Data Department</h3>
-                    From Feb.2015 to June.2015<br>
-                    Zhiquan Inc, China.
-                </div>
+        </div>
+    </section>
+    <section id="education">
+        <div class="grid-12 title">EDUCATION</div>
+        <div class="row">
+            <div class="grid-3">
+                <img class="logo" src="img/buaa-logo.jpg" alt="scholl badge of buaa">
             </div>
-        </section>
-    </div>
+            <div class="grid-9">
+                <h3 class="subtitle">Beihang University</h3>
+                B.E, Software Engineering, 2012-2016<br>
+                Major GPA 3.85/4, Overall GPA 3.74 /4 <br>
+                Ranking No.4 among 136 students in College of Software
+            </div>
+        </div>
+    </section>
+    <section id="work">
+        <div class="grid-12 title">WORK</div>
+        <div class="row">
+            <div class="grid-12">
+                <h3 class="subtitle">Software Engineer, Mobile & Big Data Department</h3>
+                From Feb.2015 to June.2015<br>
+                Zhiquan Inc, China.
+            </div>
+        </div>
+    </section>
 </body>
 <script>
     // header
@@ -121,5 +119,50 @@
         }
     };
     window.addEventListener('scroll', handleScroll, false);
+    
+    // scroll To
+    function scroll(target) {
+        var time = 200;
+
+        //若target为元素,则获取其与顶部距离
+        if(typeof target.offsetTop === 'number') {
+            target = target.offsetTop;
+        }
+
+        var offset = document.body.scrollTop;             //滚动条位置
+        var step = Math.abs(offset - target) * 5 / time ; //滚动步长
+
+        //滚动位置不超过底部
+        offset = preventOutOfPage(offset);
+
+        //定时器
+        var scroll = window.setInterval(function() {
+            if ( target == offset ) {
+                window.clearInterval( scroll );
+            } else if ( offset - target > step ) {
+                offset -= step;
+            } else if ( target - offset > step ) {
+                offset += step;
+            } else {
+                offset = target;
+            }
+            window.scrollTo(0, offset);
+        }, 5);
+    }
+
+    function preventOutOfPage(target) {
+        var clientHeight = document.documentElement.clientHeight;
+        var scrollHeight = document.body.scrollHeight;
+        if(target + clientHeight > scrollHeight) {
+            return scrollHeight - clientHeight;
+        }
+        return target;
+    }
+
+    document.querySelector('.nav-right').addEventListener('click', function(e) {
+        if (e.target.tagName === 'LI') {
+            scroll(document.querySelector('#' + e.target.dataset.target));
+        }
+    });
 </script>
 </html>
