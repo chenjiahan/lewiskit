@@ -119,10 +119,43 @@
         }
     };
     window.addEventListener('scroll', handleScroll, false);
+
+    document.querySelector('.nav-right').addEventListener('click', function(e) {
+        if (e.target.tagName === 'LI') {
+            scroll(document.querySelector('#' + e.target.dataset.target));
+        }
+    });
+
+    // requestAnimationFrame shim
+    (function() {
+        var lastTime = 0;
+        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+            window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+            window.cancelAnimationFrame =
+                    window[vendors[x] + 'CancelAnimationFrame'] ||
+                    window[vendors[x] + 'CancelRequestAnimationFrame'];
+        }
+        if (!window.requestAnimationFrame)
+            window.requestAnimationFrame = function(callback, element) {
+                var currTime = new Date().getTime();
+                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                var id = window.setTimeout(function() {
+                            callback(currTime + timeToCall);
+                        },
+                        timeToCall);
+                lastTime = currTime + timeToCall;
+                return id;
+            };
+        if (!window.cancelAnimationFrame)
+            window.cancelAnimationFrame = function(id) {
+                clearTimeout(id);
+            };
+    }());
     
     // scroll To
     function scroll(target) {
-        var time = 200;
+        var time = 300;
 
         //若target为元素,则获取其与顶部距离
         if(typeof target.offsetTop === 'number') {
@@ -130,24 +163,29 @@
         }
 
         var offset = document.body.scrollTop;             //滚动条位置
-        var step = Math.abs(offset - target) * 5 / time ; //滚动步长
+        var step = Math.abs(offset - target) * 16 / time; //滚动步长
 
         //滚动位置不超过底部
         offset = preventOutOfPage(offset);
 
         //定时器
-        var scroll = window.setInterval(function() {
-            if ( target == offset ) {
-                window.clearInterval( scroll );
-            } else if ( offset - target > step ) {
-                offset -= step;
-            } else if ( target - offset > step ) {
-                offset += step;
-            } else {
-                offset = target;
-            }
-            window.scrollTo(0, offset);
-        }, 5);
+        var scrollAnim = function(offset) {
+            window.requestAnimationFrame(function() {
+                if ( target == offset ) {
+                    return;
+                } else if ( offset - target > step ) {
+                    offset -= step;
+                } else if ( target - offset > step ) {
+                    offset += step;
+                } else {
+                    offset = target;
+                }
+                window.scrollTo(0, offset);
+                scrollAnim(offset);
+            });
+        }
+
+        scrollAnim(offset);
     }
 
     function preventOutOfPage(target) {
@@ -159,10 +197,5 @@
         return target;
     }
 
-    document.querySelector('.nav-right').addEventListener('click', function(e) {
-        if (e.target.tagName === 'LI') {
-            scroll(document.querySelector('#' + e.target.dataset.target));
-        }
-    });
 </script>
 </html>
