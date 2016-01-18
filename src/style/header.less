@@ -55,6 +55,9 @@ header {
     height: 80px;
     background: transparent;
     transition: height .2s ease-in, background .2s ease-in;
+    @media (max-width: 480px) {
+        top: 0;
+    }
 }
 .nav-left {
     float: left;
@@ -68,12 +71,15 @@ header {
         cursor: pointer;
         float: left;
         color: #fff;
-        padding: 0 15px;
+        padding: 0 1rem;
         font-weight: bold;
         line-height: 80px;
         text-align: center;
         text-decoration: none;
         transition: background .1s ease-in-out, line-height .2s ease-in;
+        @media (max-width: 480px) {
+            padding: 0 .5rem;
+        }
     }
     a {
         color: #fff;

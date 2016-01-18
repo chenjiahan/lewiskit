@@ -99,6 +99,14 @@
             </div>
         </div>
     </section>
+    <footer>
+        <ul class="icon-list">
+            <li><a href="https://www.facebook.com/profile.php?id=100009009895248" class="icon icon-facebook" target="_blank"></a></li>
+            <li><a href="https://github.com/lewisKit" class="icon icon-github" target="_blank"></a></li>
+            <li><a href="mailto:lewisfyh2012@gmail.com" class="icon icon-email" target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/in/yihao-feng-15937488" class="icon icon-linkedin" target="_blank"></a></li>
+        </ul>
+    </footer>
 </body>
 <script>
     // header
@@ -168,6 +176,8 @@
         var offset = document.documentElement.scrollTop || document.body.scrollTop;  //滚动条位置
         var step = 80; //滚动步长
 
+        target -= 60; // 减去导航条高度
+
         //滚动位置不超过底部
         offset = preventOutOfPage(offset);
 
@@ -199,6 +209,5 @@
         }
         return target;
     }
-
 </script>
 </html>
